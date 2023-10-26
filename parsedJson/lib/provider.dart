@@ -60,7 +60,6 @@ class MovieProvider extends ChangeNotifier {
   Future initialize() async {
     helper = HttpHelper();
     _movies = await helper?.getMovies(types[option]);
-    _filteredMovies = _movies;
     filterMovies(_querys);
     notifyListeners();
   }
